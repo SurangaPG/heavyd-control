@@ -1,3 +1,5 @@
 /vendor
 /temp
 /artifact
+data/*.yml
+properties/*.yml

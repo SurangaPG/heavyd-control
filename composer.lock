@@ -1564,12 +1564,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SurangaPG/heavyd-components.git",
-                "reference": "64b514eeb63f9b27dcd03d25468250ef34068bc8"
+                "reference": "7eaec7f07e0ef6841bf0a7ab074d87cf6831aec4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SurangaPG/heavyd-components/zipball/64b514eeb63f9b27dcd03d25468250ef34068bc8",
-                "reference": "64b514eeb63f9b27dcd03d25468250ef34068bc8",
+                "url": "https://api.github.com/repos/SurangaPG/heavyd-components/zipball/7eaec7f07e0ef6841bf0a7ab074d87cf6831aec4",
+                "reference": "7eaec7f07e0ef6841bf0a7ab074d87cf6831aec4",
                 "shasum": ""
             },
             "require": {
@@ -1590,7 +1590,7 @@
                 "source": "https://github.com/SurangaPG/heavyd-components/tree/master",
                 "issues": "https://github.com/SurangaPG/heavyd-components/issues"
             },
-            "time": "2018-03-31T22:09:23+00:00"
+            "time": "2018-05-05T16:38:14+00:00"
         },
         {
             "name": "symfony/console",
