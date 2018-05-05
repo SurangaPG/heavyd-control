@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<project name="Security status tasks" default="help" description="">
+
+    <target name="help">
+        <echo message="see ... documentation link for more info" />
+    </target>
+
+    <target name="team-status:update">
+        <fail unless="confluence.pass" />
+        <fail unless="confluence.user" />
+
+        <mkdir dir="${project.basedir}/artifact" />
+        <mkdir dir="${project.basedir}/artifact/team-status" />
+        <mkdir dir="${project.basedir}/artifact/team-status/html" />
+        <team-status sourceDir="${project.basedir}/data/ausy-project-data/data"
+                teamConfig="${project.basedir}/data/ausy-project-data/properties/teams.yml"
+                confluenceUser="${confluence.user}"
+                confluencePass="${confluence.pass}"
+        />
+    </target>
+</project>

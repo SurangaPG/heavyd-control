@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<project name="Status reporter tasks" default="control:help" description="">
+
+    <!-- Include extra phing task classes -->
+    <includepath classpath="lib/phing/src" />
+    <taskdef classname="SecurityStatusTask" name="security-status" />
+    <taskdef classname="SecurityHtmlSnippetsTask" name="security-html-snippets" />
+
+    <taskdef classname="TeamStatusTask" name="team-status" />
+
+    <!-- Include extra phing build files -->
+    <import file="lib/phing/build.security-status.xml" />
+    <import file="lib/phing/build.team-status.xml" />
+
+    <target name="control:help">
+        <echo message="see ... documentation link for more info" />
+    </target>
+
+    <target name="control:security-status">
+        <echo message="Checking the security status for all the projects" />
+        <phingcall target="security-status:update" />
+    </target>
+</project>

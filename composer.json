@@ -1,0 +1,21 @@
+{
+  "repositories": {
+    "heavyd-components": {
+      "type": "vcs",
+      "url": "git@github.com:SurangaPG/heavyd-components.git"
+    }
+  },
+  "name": "heavyd/control",
+  "prefer-stable": true,
+  "require": {
+    "surangapg/heavyd-components": "@dev",
+    "phing/phing": "^2.16",
+    "phpunit/phpunit": "7.0.*",
+    "tlr/html-table-builder": "^1.1"
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.18"
+    }
+  }
+}
