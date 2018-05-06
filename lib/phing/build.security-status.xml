@@ -11,6 +11,10 @@
         <mkdir dir="${project.basedir}/artifact/security-status" />
         <mkdir dir="${project.basedir}/artifact/security-status/html" />
         <security-status sourceDir="${project.basedir}/data" outputDir="${project.basedir}/artifact/security-status" />
-        <security-html-snippets sourceFile="${project.basedir}/artifact/security-status/security-report.yml" outputDir="${project.basedir}/artifact/security-status/html" />
+        <security-html-snippets
+                sourceFile="${project.basedir}/artifact/security-status/security-report.yml"
+                outputDir="${project.basedir}/artifact/security-status/html"
+                templateDir="${project.basedir}/tpl"
+        />
     </target>
 </project>

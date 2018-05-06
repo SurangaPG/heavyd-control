@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 960px;
+}
+
+/* Navigation */
+.main-nav__links {
+
+}
+
+.main-nav {
+    padding: 0.6rem;
+}
+
+.main-nav a {
+    color: #224492;
+    text-decoration: none;
+    position: relative;
+}
+
+.main-nav .main-nav__back {
+    padding: 0.3rem 2rem 0.3rem 1rem;
+    border-bottom: solid 1px lightgray;
+}
+
+.main-nav .main-nav__back::before {
+    content: ' ';
+    background-image: url('svg/fa-chevron-left.svg');
+    height: 0.6rem;
+    display: inline;
+    width: 0.6rem;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s;
+}
+
+.main-nav .main-nav__back:hover::before {
+    left: -.1rem;
+}
+
+.main-nav .main-nav__links a::after {
+     content: ' ';
+     background-image: url('svg/fa-chevron-right.svg');
+     height: 0.6rem;
+     display: inline;
+     width: 0.6rem;
+     background-size: contain;
+     position: absolute;
+     right: -.8rem;
+     top: 50%;
+     transform: translateY(-50%);
+     transition: all 0.4s;
+}
+
+.main-nav .main-nav__links .main-nav__link {
+    padding: 0.3rem;
+    border-bottom: solid 1px lightgray;
+}
+
+.main-nav .main-nav__links a:hover::after {
+    right: -1rem;
+}
+
+.main-nav .main-nav__links {
+    list-style: none;
+}
+
+/* The logo */
+.logo {
+    display: block;
+    width: 98px;
+    margin: 0 auto;
+}
+
+.logo__image {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+}
+
+.logo.-small {
+    width: 75px;
+    margin: 1rem auto 0;
+}
+
+/* The branding masthead */
+.masthead {
+    margin: 0.7rem 0;
+}
+
+.masthead__main {
+    margin-bottom: 0;
+}
+
+.masthead__sub {
+    color: darkgray;
+    font-weight: 300;
+}
+
+.masthead.-small .masthead__main {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.masthead.-small .masthead__sub {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Code tags */
+code {
+    display: block;
+}
+
+code>pre {
+    padding: 2rem 1rem;
+    background-color: black;
+    color: white;
+    overflow: scroll;
+}
+
+/** layout elements **/
+.l-header {
+    border-bottom: solid 3px darkgray;
+}
+
+.l-header.-small {
+    padding: 0 15px;
+}
+
+.l-left-column {
+    position: fixed;
+    overflow: scroll;
+    width: 340px;
+    height: 100%;
+    border-right: solid 3px lightgrey;
+    background-color: white;
+    left: 0;
+    top: 0;
+}
+
+.l-colum-group {
+    margin-left: 340px;
+    background-color: lightgrey;
+    box-sizing: border-box;
+}
+
+.l-right-column {
+    margin: 0 auto;
+    width: 90%;
+    padding: 2rem 0;
+    min-height: 100vh;
+}

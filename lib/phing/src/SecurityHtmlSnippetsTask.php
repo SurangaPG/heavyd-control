@@ -53,6 +53,15 @@ class SecurityHtmlSnippetsTask extends Task {
    */
   protected $outputDir;
 
+
+  /**
+   * Dir where the template data is.
+   *
+   * @var string
+   *   Dir where the json reports will be outputted.
+   */
+  protected $templateDir;
+
   /**
    * Generate all the snippets.
    *
@@ -151,8 +160,12 @@ class SecurityHtmlSnippetsTask extends Task {
     }
 
     // Write to html.
+    $loader = new \Twig_Loader_Filesystem($this->getTemplateDir());
+    $twigEnv = new \Twig_Environment($loader);
+
     foreach ($this->tables as $team => $tableInfo) {
-      $outputFile = $this->getOutputDir() . '/' . $team . '.html';
+      $outputFile = $this->getOutputDir() . '/' . $team . '-snippet.html';
+      $outputFullFile = $this->getOutputDir() . '/' . $team . '.html';
       $output = $tableInfo['header']->render();
 
       foreach ($tableInfo['details'] as $detailTable) {
@@ -162,6 +175,9 @@ class SecurityHtmlSnippetsTask extends Task {
       }
 
       file_put_contents($outputFile, $output);
+
+      $html = $twigEnv->render('page.html.twig', ['content' => $output]);
+      file_put_contents($outputFullFile, $html);
     }
   }
 
@@ -183,6 +199,26 @@ class SecurityHtmlSnippetsTask extends Task {
    */
   public function getSourceFile() {
     return $this->sourceFile;
+  }
+
+  /**
+   * Get the template dir.
+   *
+   * @return string
+   *   Directory with all the twig templates etc.
+   */
+  public function getTemplateDir() {
+    return $this->templateDir;
+  }
+
+  /**
+   * Set the template dir.
+   *
+   * @param string $templateDir
+   *   Directory with all the template information.
+   */
+  public function setTemplateDir(string $templateDir) {
+    $this->templateDir = $templateDir;
   }
 
   /**

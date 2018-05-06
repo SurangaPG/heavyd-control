@@ -11,7 +11,8 @@
     "surangapg/heavyd-components": "@dev",
     "phing/phing": "^2.16",
     "phpunit/phpunit": "7.0.*",
-    "tlr/html-table-builder": "^1.1"
+    "tlr/html-table-builder": "^1.1",
+    "twig/twig": "^2.4"
   },
   "config": {
     "platform": {
